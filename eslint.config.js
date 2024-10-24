@@ -14,7 +14,7 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  { ignores: ['dist', '**/*.gen.ts'] },
+  { ignores: ['dist', '.output', '**/*.gen.ts'] },
   {
     languageOptions: {
       ecmaVersion: 2020,
@@ -107,7 +107,6 @@ export default tseslint.config(
     },
     plugins: {
       'jsx-a11y': jsxA11y,
-      // @ts-ignore
       react,
       'react-hooks': reactHooks,
       tailwindcss,
