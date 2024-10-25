@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 
+import { ModeToggle } from '~/components/mode-toggle';
 import { buttonVariants } from '~/components/ui/button';
 
 export const Route = createFileRoute('/')({
@@ -13,10 +14,11 @@ function HomeComponent() {
 
       <div>
         <p>You are not logged in.</p>
-        <div className="mt-6">
+        <div className="mt-6 flex gap-2">
           <Link className={buttonVariants({ variant: 'default' })} to="/login">
             Login
           </Link>
+          <ModeToggle />
         </div>
       </div>
     </div>

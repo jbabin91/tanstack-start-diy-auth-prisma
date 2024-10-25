@@ -33,6 +33,7 @@
     "@radix-ui/react-toggle",
     "@radix-ui/react-tooltip",
     "lucide-react",
-    "react-day-picker"
+    "react-day-picker",
+    "sonner"
   ]
 }

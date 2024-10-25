@@ -14,7 +14,7 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  { ignores: ['dist', '.output', '**/*.gen.ts'] },
+  { ignores: ['dist', '.output', '.vinxi', '**/*.gen.ts'] },
   {
     languageOptions: {
       ecmaVersion: 2020,

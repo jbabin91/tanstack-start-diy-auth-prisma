@@ -8,6 +8,8 @@ import { Body, Head, Html, Meta, Scripts } from '@tanstack/start';
 
 import { DefaultCatchBoundary } from '~/components/errors/default-catch-boundary';
 import { NotFound } from '~/components/errors/not-found';
+import { Toaster } from '~/components/ui/sonner';
+import { ThemeProvider } from '~/providers/theme-provider';
 import appCss from '~/styles/globals.css?url';
 import { seo } from '~/utils/seo';
 
@@ -107,14 +109,22 @@ function RootDocument({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <Html>
+    <Html lang="en">
       <Head>
         <Meta />
       </Head>
       <Body>
-        {children}
+        <ThemeProvider
+          disableTransitionOnChange
+          enableSystem
+          attribute="class"
+          defaultTheme="system"
+        >
+          {children}
+          <Toaster />
+        </ThemeProvider>
         <ScrollRestoration />
-        <TanStackRouterDevtools position="bottom-right" />
+        <TanStackRouterDevtools />
         <Scripts />
       </Body>
     </Html>

@@ -8,6 +8,8 @@ const Toaster = ({ ...props }: ToasterProps) => {
 
   return (
     <Sonner
+      closeButton
+      richColors
       className="toaster group"
       theme={theme as ToasterProps['theme']}
       toastOptions={{
@@ -27,3 +29,4 @@ const Toaster = ({ ...props }: ToasterProps) => {
 };
 
 export { Toaster };
+export { toast } from 'sonner';
