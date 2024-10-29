@@ -3,12 +3,12 @@ import {
   Outlet,
   ScrollRestoration,
 } from '@tanstack/react-router';
-import { TanStackRouterDevtools } from '@tanstack/router-devtools';
 import { Body, Head, Html, Meta, Scripts } from '@tanstack/start';
 
 import { DefaultCatchBoundary } from '~/components/errors/default-catch-boundary';
 import { NotFound } from '~/components/errors/not-found';
 import { Toaster } from '~/components/ui/sonner';
+import { TanstackRouterDevtools } from '~/components/utils/tanstack-router-devtools';
 import { ThemeProvider } from '~/providers/theme-provider';
 import appCss from '~/styles/globals.css?url';
 import { seo } from '~/utils/seo';
@@ -124,7 +124,7 @@ function RootDocument({
           <Toaster />
         </ThemeProvider>
         <ScrollRestoration />
-        <TanStackRouterDevtools />
+        <TanstackRouterDevtools />
         <Scripts />
       </Body>
     </Html>

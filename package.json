@@ -4,13 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsc -b && vinxi build --preset node-server",
+    "build": "tsc -b && vinxi build",
     "dev": "vinxi dev",
     "format": "prettier -uw --cache .",
     "format:check": "prettier -uc --cache .",
     "lint": "eslint . --max-warnings 0 --cache --cache-location node_modules/.cache/eslint/.eslintcache",
     "lint:fix": "eslint . --fix --cache --cache-location node_modules/.cache/eslint/.eslintcache",
-    "start": "vinxi start --preset node-server",
+    "start": "vinxi start",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
